@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projekt_zaliczeniowy_po"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" Background="DarkGray">
+        Title="MainWindow" Height="600" Width="800" Background="DarkGray">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -18,6 +18,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -49,7 +51,7 @@
             Background="#FFD9D9D9"
             >
             <Image
-            x:Name="img1"            
+            x:Name="img1"
             />
         </Border>
         <TextBox
@@ -70,13 +72,39 @@
             Grid.Column="0"
             Grid.Row="3"
             Grid.ColumnSpan="2"
+            Margin="10 0 5 0"
+            FontSize="30"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >20°C
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherPressure1"
+            Grid.Column="0"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Margin="10 0 5 0"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >1018 hPa
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherHumidity1"
+            Grid.Column="0"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
             Margin="10 0 5 5"
-            FontSize="40"
+            FontSize="30"
             TextAlignment="Center"
             VerticalContentAlignment="Center"
             IsEnabled="False"
             BorderThickness="1 0 1 1"
-            >20°C
+            >35%
         </TextBox>
         <TextBox
             x:Name="WeatherDt2"
@@ -123,13 +151,82 @@
             Grid.Column="2"
             Grid.Row="3"
             Grid.ColumnSpan="2"
-            Margin="5 0 5 5"
-            FontSize="40"
+            Margin="5 0 5 0"
+            FontSize="30"
             TextAlignment="Center"
             VerticalContentAlignment="Center"
             IsEnabled="False"
-            BorderThickness="1 0 1 1"
+            BorderThickness="1 0 1 0"
             >20°C
+        </TextBox>
+        <TextBox
+            x:Name="WeatherTemp1Arr"
+            Grid.Column="3"
+            Grid.Row="3"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherPressure2"
+            Grid.Column="2"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Margin="5 0 5 0"
+            Padding="0 0 15 0"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >1018 hPa
+        </TextBox>
+        <TextBox
+            x:Name="WeatherPressure1Arr"
+            Grid.Column="3"
+            Grid.Row="4"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherHumidity2"
+            Grid.Column="2"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Margin="5 0 5 5"
+            FontSize="30"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >35%
+        </TextBox>
+        <TextBox
+            x:Name="WeatherHumidity1Arr"
+            Grid.Column="3"
+            Grid.Row="5"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
         </TextBox>
         <TextBox
             x:Name="WeatherDt3"
@@ -171,18 +268,87 @@
             BorderThickness="1 0 1 0"
             >thunderstorm
         </TextBox>
-        <TextBox 
+        <TextBox
             x:Name="WeatherTemp3"
             Grid.Column="4"
             Grid.Row="3"
             Grid.ColumnSpan="2"
-            Margin="5 0 5 5"
-            FontSize="40"
+            Margin="5 0 5 0"
+            FontSize="30"
             TextAlignment="Center"
             VerticalContentAlignment="Center"
             IsEnabled="False"
-            BorderThickness="1 0 1 1"
+            BorderThickness="1 0 1 0"
             >20°C
+        </TextBox>
+        <TextBox
+            x:Name="WeatherTemp2Arr"
+            Grid.Column="5"
+            Grid.Row="3"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherPressure3"
+            Grid.Column="4"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Margin="5 0 5 0"
+            Padding="0 0 15 0"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >1018 hPa
+        </TextBox>
+        <TextBox
+            x:Name="WeatherPressure2Arr"
+            Grid.Column="5"
+            Grid.Row="4"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherHumidity3"
+            Grid.Column="4"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Margin="5 0 5 5"
+            FontSize="30"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >35%
+        </TextBox>
+        <TextBox
+            x:Name="WeatherHumidity2Arr"
+            Grid.Column="5"
+            Grid.Row="5"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
         </TextBox>
         <TextBox
             x:Name="WeatherDt4"
@@ -229,79 +395,158 @@
             Grid.Column="6"
             Grid.Row="3"
             Grid.ColumnSpan="2"
+            Margin="5 0 10 0"
+            FontSize="30"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >20°C
+        </TextBox>
+        <TextBox
+            x:Name="WeatherTemp3Arr"
+            Grid.Column="7"
+            Grid.Row="3"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherPressure4"
+            Grid.Column="6"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Margin="5 0 10 0"
+            Padding="0 0 15 0"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            BorderThickness="1 0 1 0"
+            >1018 hPa
+        </TextBox>
+        <TextBox
+            x:Name="WeatherPressure3Arr"
+            Grid.Column="7"
+            Grid.Row="4"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
+        </TextBox>
+        <TextBox 
+            x:Name="WeatherHumidity4"
+            Grid.Column="6"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
             Margin="5 0 10 5"
-            FontSize="40"
+            FontSize="30"
             TextAlignment="Center"
             VerticalContentAlignment="Center"
             IsEnabled="False"
             BorderThickness="1 0 1 1"
-            >20°C
+            >35%
+        </TextBox>
+        <TextBox
+            x:Name="WeatherHumidity3Arr"
+            Grid.Column="7"
+            Grid.Row="5"
+            Margin="0 0 15 0"
+            Padding="0 0 0 5"
+            FontSize="35"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            IsEnabled="False"
+            Background="Transparent" HorizontalAlignment="Right"
+            BorderThickness="0"
+            >↑
         </TextBox>
         <TextBox
             x:Name="CurrentCity"
             Grid.Column="0"
-            Grid.Row="4"
+            Grid.Row="6"
             Grid.ColumnSpan="8"
             Margin="10 5 10 5"
+            BorderBrush="Black"
             Text="Current City"
-            FontSize="40"
+            FontSize="25"
             TextAlignment="Center"
-            VerticalContentAlignment="Top"
+            VerticalContentAlignment="Center"
             IsEnabled="False"
             >
         </TextBox>
         <TextBox
             x:Name="enterX"
             Grid.Column="0"
-            Grid.Row="5"
+            Grid.Row="7"
             Grid.ColumnSpan="2"
             Margin="10 5 5 5"
             Padding="0 0 10 0"
-            Text="X"
-            FontSize="42"
-            TextAlignment="Right"
-            VerticalContentAlignment="Center" Foreground="#FF3CC710"
+            BorderBrush="Black"
+            Text="Latitude"
+            FontSize="25"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            Foreground="Black"
+            Background="#FF94FF72"
+            GotFocus="enterX_GotFocus"
             />
         <TextBox
             x:Name="enterY"
             Grid.Column="2"
-            Grid.Row="5"
+            Grid.Row="7"
             Grid.ColumnSpan="2"
             Margin="5 5 5 5"
             Padding="0 0 10 0"
-            Text="Y"
-            FontSize="42"
-            TextAlignment="Right"
-            VerticalContentAlignment="Center" Foreground="#FF3CC710"
+            BorderBrush="Black"
+            Text="Longtitude"
+            FontSize="25"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            Foreground="Black"
+            Background="#FF94FF72"
+            GotFocus="enterY_GotFocus"
             />
         <ComboBox
             x:Name="SelectCity"
             Grid.Column="4"
-            Grid.Row="5"
+            Grid.Row="7"
             Grid.ColumnSpan="4"
             Margin="5 5 10 5"
-            FontSize="42"
-            VerticalContentAlignment="Center" Foreground="#FF6EAEFF"
-            />
+            FontSize="25"
+            VerticalContentAlignment="Center" Foreground="Black" BorderBrush="Black"
+            >
+        </ComboBox>
         <Button
             x:Name="xySearch"
             Grid.Column="0"
-            Grid.Row="6"
+            Grid.Row="8"
             Grid.ColumnSpan="4"
             Margin="10 5 5 10"
-            Padding="0 0 0 10"
-            FontSize="36" Click="Button_Click" Background="#FF3CC710"
+            BorderBrush="Black"
+            FontSize="25" Click="Button_Click" Background="#FF94FF72"
             >
             Search
         </Button>
         <Button
             x:Name="normalSearch"
             Grid.Column="4"
-            Grid.Row="6"
+            Grid.Row="8"
             Grid.ColumnSpan="8"
             Margin="5 5 10 10"
-            Padding="0 0 0 10"
-            FontSize="36" Click="Button_Click1" Background="#FF6EAEFF"
+            BorderBrush="Black"
+            FontSize="25" Click="Button_Click1" Background="#FF89BDFF" 
             >
             Search
         </Button>
